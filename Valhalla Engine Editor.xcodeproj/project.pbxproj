@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8498CCE2F1133A3006B5040 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8498CCD2F1133A3006B5040 /* MetalKit.framework */; };
+		B86FC1E42F05AD59007722A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FC1E32F05AD59007722A5 /* Cocoa.framework */; platformFilters = (macos, ); };
+		B86FC1ED2F05B80E007722A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FC1E72F05ADA8007722A5 /* Foundation.framework */; };
+		B8A3E93B2F0739F70011171D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3E93A2F0739F70011171D /* Metal.framework */; };
+		B8A3EA6A2F0743A70011171D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3EA692F0743A70011171D /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B8498CCD2F1133A3006B5040 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		B86FC1D52F05ACF8007722A5 /* Valhalla Engine Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valhalla Engine Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86FC1E32F05AD59007722A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B86FC1E52F05AD83007722A5 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/iOSSupport/System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		B86FC1E72F05ADA8007722A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B8A3E93A2F0739F70011171D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		B8A3EA692F0743A70011171D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B8AAC7DA2F12CD7800EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Valhalla Engine Editor" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				extern/fbxsdk/lib/clang/debug/libalembic.a,
+				extern/fbxsdk/lib/clang/debug/libfbxsdk.a,
+				extern/fbxsdk/lib/clang/debug/libfbxsdk.dylib,
+				extern/fbxsdk/lib/legacy/debug/libalembic.a,
+				extern/fbxsdk/lib/legacy/debug/libfbxsdk.a,
+				extern/fbxsdk/lib/legacy/debug/libfbxsdk.dylib,
+				extern/fbxsdk/lib/legacy/release/libalembic.a,
+				extern/fbxsdk/lib/legacy/release/libfbxsdk.a,
+				extern/fbxsdk/lib/legacy/release/libfbxsdk.dylib,
+				"extern/fmt/.clang-tidy",
+				extern/fmt/.github/dependabot.yml,
+				extern/fmt/.github/FUNDING.yml,
+				extern/fmt/.github/issue_template.md,
+				extern/fmt/.github/pull_request_template.md,
+				extern/fmt/.github/workflows/cifuzz.yml,
+				extern/fmt/.github/workflows/doc.yml,
+				extern/fmt/.github/workflows/lint.yml,
+				extern/fmt/.github/workflows/linux.yml,
+				extern/fmt/.github/workflows/macos.yml,
+				extern/fmt/.github/workflows/scorecard.yml,
+				extern/fmt/.github/workflows/windows.yml,
+				extern/fmt/.gitignore,
+				extern/fmt/ChangeLog.md,
+				extern/fmt/CMakeLists.txt,
+				extern/fmt/CONTRIBUTING.md,
+				extern/fmt/doc/api.md,
+				"extern/fmt/doc/ChangeLog-old.md",
+				extern/fmt/doc/fmt.css,
+				extern/fmt/doc/fmt.js,
+				"extern/fmt/doc/get-started.md",
+				extern/fmt/doc/index.md,
+				"extern/fmt/doc/LICENSE-exception",
+				extern/fmt/doc/perf.svg,
+				"extern/fmt/doc/python-license.txt",
+				extern/fmt/doc/syntax.md,
+				extern/fmt/LICENSE,
+				extern/fmt/README.md,
+				extern/fmt/src/fmt.cc,
+				extern/fmt/support/Android.mk,
+				extern/fmt/support/AndroidManifest.xml,
+				extern/fmt/support/build.gradle,
+				"extern/fmt/support/C++.sublime-syntax",
+				"extern/fmt/support/check-commits",
+				extern/fmt/support/cmake/FindSetEnv.cmake,
+				"extern/fmt/support/cmake/fmt-config.cmake.in",
+				extern/fmt/support/cmake/fmt.pc.in,
+				extern/fmt/support/cmake/JoinPaths.cmake,
+				extern/fmt/support/docopt.py,
+				extern/fmt/support/mkdocs,
+				extern/fmt/support/mkdocs.yml,
+				extern/fmt/support/printable.py,
+				extern/fmt/support/python/mkdocstrings_handlers/cxx/__init__.py,
+				extern/fmt/support/python/mkdocstrings_handlers/cxx/templates/README,
+				extern/fmt/support/README,
+				extern/fmt/support/release.py,
+				extern/fmt/support/Vagrantfile,
+				"extern/fmt/test/add-subdirectory-test/CMakeLists.txt",
+				"extern/fmt/test/add-subdirectory-test/main.cc",
+				"extern/fmt/test/args-test.cc",
+				"extern/fmt/test/assert-test.cc",
+				"extern/fmt/test/base-test.cc",
+				"extern/fmt/test/chrono-test.cc",
+				extern/fmt/test/CMakeLists.txt,
+				"extern/fmt/test/color-test.cc",
+				"extern/fmt/test/compile-error-test/CMakeLists.txt",
+				"extern/fmt/test/compile-test.cc",
+				"extern/fmt/test/cuda-test/CMakeLists.txt",
+				"extern/fmt/test/cuda-test/cpp14.cc",
+				"extern/fmt/test/cuda-test/cuda-cpp14.cu",
+				"extern/fmt/test/detect-stdfs.cc",
+				"extern/fmt/test/enforce-checks-test.cc",
+				"extern/fmt/test/find-package-test/CMakeLists.txt",
+				"extern/fmt/test/find-package-test/main.cc",
+				"extern/fmt/test/format-impl-test.cc",
+				"extern/fmt/test/format-test.cc",
+				extern/fmt/test/fuzzing/.gitignore,
+				extern/fmt/test/fuzzing/build.sh,
+				"extern/fmt/test/fuzzing/chrono-duration.cc",
+				"extern/fmt/test/fuzzing/chrono-timepoint.cc",
+				extern/fmt/test/fuzzing/CMakeLists.txt,
+				extern/fmt/test/fuzzing/float.cc,
+				extern/fmt/test/fuzzing/main.cc,
+				"extern/fmt/test/fuzzing/named-arg.cc",
+				"extern/fmt/test/fuzzing/one-arg.cc",
+				extern/fmt/test/fuzzing/README.md,
+				"extern/fmt/test/fuzzing/two-args.cc",
+				"extern/fmt/test/gtest-extra-test.cc",
+				"extern/fmt/test/gtest-extra.cc",
+				"extern/fmt/test/gtest/.clang-format",
+				extern/fmt/test/gtest/CMakeLists.txt,
+				"extern/fmt/test/gtest/gmock-gtest-all.cc",
+				"extern/fmt/test/header-only-test.cc",
+				"extern/fmt/test/module-test.cc",
+				"extern/fmt/test/no-builtin-types-test.cc",
+				"extern/fmt/test/noexception-test.cc",
+				"extern/fmt/test/os-test.cc",
+				"extern/fmt/test/ostream-test.cc",
+				"extern/fmt/test/perf-sanity.cc",
+				"extern/fmt/test/posix-mock-test.cc",
+				"extern/fmt/test/printf-test.cc",
+				"extern/fmt/test/ranges-odr-test.cc",
+				"extern/fmt/test/ranges-test.cc",
+				"extern/fmt/test/scan-test.cc",
+				"extern/fmt/test/static-export-test/CMakeLists.txt",
+				"extern/fmt/test/static-export-test/library.cc",
+				"extern/fmt/test/static-export-test/main.cc",
+				"extern/fmt/test/std-test.cc",
+				"extern/fmt/test/test-main.cc",
+				"extern/fmt/test/unicode-test.cc",
+				extern/fmt/test/util.cc,
+				"extern/fmt/test/xchar-test.cc",
+			);
+			target = B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		B8AAC7E02F12D74B00EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib = (CodeSignOnCopy, );
+			};
+			buildPhase = B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */;
+			membershipExceptions = (
+				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B8AAC7DA2F12CD7800EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Valhalla Engine Editor" target */,
+				B8AAC7E02F12D74B00EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */,
+			);
+			path = "Valhalla Engine Editor";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B86FC1D22F05ACF8007722A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8498CCE2F1133A3006B5040 /* MetalKit.framework in Frameworks */,
+				B8A3EA6A2F0743A70011171D /* QuartzCore.framework in Frameworks */,
+				B86FC1ED2F05B80E007722A5 /* Foundation.framework in Frameworks */,
+				B8A3E93B2F0739F70011171D /* Metal.framework in Frameworks */,
+				B86FC1E42F05AD59007722A5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B86FC1C62F05AB70007722A5 = {
+			isa = PBXGroup;
+			children = (
+				B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */,
+				B86FC1E22F05AD59007722A5 /* Frameworks */,
+				B86FC1D62F05ACF8007722A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B86FC1D62F05ACF8007722A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B86FC1D52F05ACF8007722A5 /* Valhalla Engine Editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B86FC1E22F05AD59007722A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8498CCD2F1133A3006B5040 /* MetalKit.framework */,
+				B8A3EA692F0743A70011171D /* QuartzCore.framework */,
+				B8A3E93A2F0739F70011171D /* Metal.framework */,
+				B86FC1E72F05ADA8007722A5 /* Foundation.framework */,
+				B86FC1E52F05AD83007722A5 /* GameController.framework */,
+				B86FC1E32F05AD59007722A5 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B86FC1DE2F05ACF9007722A5 /* Build configuration list for PBXNativeTarget "Valhalla Engine Editor" */;
+			buildPhases = (
+				B86FC1D12F05ACF8007722A5 /* Sources */,
+				B86FC1D22F05ACF8007722A5 /* Frameworks */,
+				B86FC1D32F05ACF8007722A5 /* Resources */,
+				B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */,
+			);
+			name = "Valhalla Engine Editor";
+			packageProductDependencies = (
+			);
+			productName = "Valhalla Engine Editor";
+			productReference = B86FC1D52F05ACF8007722A5 /* Valhalla Engine Editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B86FC1C72F05AB70007722A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					B86FC1D42F05ACF8007722A5 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = B86FC1CA2F05AB70007722A5 /* Build configuration list for PBXProject "Valhalla Engine Editor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B86FC1C62F05AB70007722A5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B86FC1D62F05ACF8007722A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B86FC1D32F05ACF8007722A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B86FC1D12F05ACF8007722A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B86FC1CB2F05AB70007722A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				Build = "";
+				CLANG_ENABLE_MODULES = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B86FC1CC2F05AB70007722A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				Build = "";
+				CLANG_ENABLE_MODULES = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B86FC1DF2F05ACF9007722A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				FRAMEWORK_SEARCH_PATHS = "\"<Multiple values>\"";
+				GCC_C_LANGUAGE_STANDARD = c23;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/fbxsdk/include",
+					"$(PROJECT_DIR)/fmt/include",
+				);
+				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/fbxsdk/lib",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "RedStudios.Valhalla-Engine-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objc;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		B86FC1E02F05ACF9007722A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7WV66DX3JJ;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				FRAMEWORK_SEARCH_PATHS = "\"<Multiple values>\"";
+				GCC_C_LANGUAGE_STANDARD = c23;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/fbxsdk/include",
+					"$(PROJECT_DIR)/fmt/include",
+				);
+				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/fbxsdk/lib",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "RedStudios.Valhalla-Engine-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objc;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B86FC1CA2F05AB70007722A5 /* Build configuration list for PBXProject "Valhalla Engine Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B86FC1CB2F05AB70007722A5 /* Debug */,
+				B86FC1CC2F05AB70007722A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B86FC1DE2F05ACF9007722A5 /* Build configuration list for PBXNativeTarget "Valhalla Engine Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B86FC1DF2F05ACF9007722A5 /* Debug */,
+				B86FC1E02F05ACF9007722A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B86FC1C72F05AB70007722A5 /* Project object */;
+}
