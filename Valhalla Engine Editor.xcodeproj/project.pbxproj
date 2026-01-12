@@ -38,127 +38,45 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B8AAC7DA2F12CD7800EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Valhalla Engine Editor" target */ = {
+		B8CFCCFE2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Valhalla Engine Editor" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Assets.xcassets,
 				extern/fbxsdk/lib/clang/debug/libalembic.a,
 				extern/fbxsdk/lib/clang/debug/libfbxsdk.a,
 				extern/fbxsdk/lib/clang/debug/libfbxsdk.dylib,
+				extern/fbxsdk/lib/clang/release/libalembic.a,
+				extern/fbxsdk/lib/clang/release/libfbxsdk.a,
+				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib,
 				extern/fbxsdk/lib/legacy/debug/libalembic.a,
 				extern/fbxsdk/lib/legacy/debug/libfbxsdk.a,
 				extern/fbxsdk/lib/legacy/debug/libfbxsdk.dylib,
 				extern/fbxsdk/lib/legacy/release/libalembic.a,
 				extern/fbxsdk/lib/legacy/release/libfbxsdk.a,
 				extern/fbxsdk/lib/legacy/release/libfbxsdk.dylib,
-				"extern/fmt/.clang-tidy",
-				extern/fmt/.github/dependabot.yml,
-				extern/fmt/.github/FUNDING.yml,
-				extern/fmt/.github/issue_template.md,
-				extern/fmt/.github/pull_request_template.md,
-				extern/fmt/.github/workflows/cifuzz.yml,
-				extern/fmt/.github/workflows/doc.yml,
-				extern/fmt/.github/workflows/lint.yml,
-				extern/fmt/.github/workflows/linux.yml,
-				extern/fmt/.github/workflows/macos.yml,
-				extern/fmt/.github/workflows/scorecard.yml,
-				extern/fmt/.github/workflows/windows.yml,
-				extern/fmt/.gitignore,
-				extern/fmt/ChangeLog.md,
-				extern/fmt/CMakeLists.txt,
-				extern/fmt/CONTRIBUTING.md,
-				extern/fmt/doc/api.md,
-				"extern/fmt/doc/ChangeLog-old.md",
-				extern/fmt/doc/fmt.css,
-				extern/fmt/doc/fmt.js,
-				"extern/fmt/doc/get-started.md",
-				extern/fmt/doc/index.md,
-				"extern/fmt/doc/LICENSE-exception",
-				extern/fmt/doc/perf.svg,
-				"extern/fmt/doc/python-license.txt",
-				extern/fmt/doc/syntax.md,
-				extern/fmt/LICENSE,
-				extern/fmt/README.md,
-				extern/fmt/src/fmt.cc,
-				extern/fmt/support/Android.mk,
-				extern/fmt/support/AndroidManifest.xml,
-				extern/fmt/support/build.gradle,
-				"extern/fmt/support/C++.sublime-syntax",
-				"extern/fmt/support/check-commits",
-				extern/fmt/support/cmake/FindSetEnv.cmake,
-				"extern/fmt/support/cmake/fmt-config.cmake.in",
-				extern/fmt/support/cmake/fmt.pc.in,
-				extern/fmt/support/cmake/JoinPaths.cmake,
-				extern/fmt/support/docopt.py,
-				extern/fmt/support/mkdocs,
-				extern/fmt/support/mkdocs.yml,
-				extern/fmt/support/printable.py,
-				extern/fmt/support/python/mkdocstrings_handlers/cxx/__init__.py,
-				extern/fmt/support/python/mkdocstrings_handlers/cxx/templates/README,
-				extern/fmt/support/README,
-				extern/fmt/support/release.py,
-				extern/fmt/support/Vagrantfile,
-				"extern/fmt/test/add-subdirectory-test/CMakeLists.txt",
-				"extern/fmt/test/add-subdirectory-test/main.cc",
-				"extern/fmt/test/args-test.cc",
-				"extern/fmt/test/assert-test.cc",
-				"extern/fmt/test/base-test.cc",
-				"extern/fmt/test/chrono-test.cc",
-				extern/fmt/test/CMakeLists.txt,
-				"extern/fmt/test/color-test.cc",
-				"extern/fmt/test/compile-error-test/CMakeLists.txt",
-				"extern/fmt/test/compile-test.cc",
-				"extern/fmt/test/cuda-test/CMakeLists.txt",
-				"extern/fmt/test/cuda-test/cpp14.cc",
-				"extern/fmt/test/cuda-test/cuda-cpp14.cu",
-				"extern/fmt/test/detect-stdfs.cc",
-				"extern/fmt/test/enforce-checks-test.cc",
-				"extern/fmt/test/find-package-test/CMakeLists.txt",
-				"extern/fmt/test/find-package-test/main.cc",
-				"extern/fmt/test/format-impl-test.cc",
-				"extern/fmt/test/format-test.cc",
-				extern/fmt/test/fuzzing/.gitignore,
-				extern/fmt/test/fuzzing/build.sh,
-				"extern/fmt/test/fuzzing/chrono-duration.cc",
-				"extern/fmt/test/fuzzing/chrono-timepoint.cc",
-				extern/fmt/test/fuzzing/CMakeLists.txt,
-				extern/fmt/test/fuzzing/float.cc,
-				extern/fmt/test/fuzzing/main.cc,
-				"extern/fmt/test/fuzzing/named-arg.cc",
-				"extern/fmt/test/fuzzing/one-arg.cc",
-				extern/fmt/test/fuzzing/README.md,
-				"extern/fmt/test/fuzzing/two-args.cc",
-				"extern/fmt/test/gtest-extra-test.cc",
-				"extern/fmt/test/gtest-extra.cc",
-				"extern/fmt/test/gtest/.clang-format",
-				extern/fmt/test/gtest/CMakeLists.txt,
-				"extern/fmt/test/gtest/gmock-gtest-all.cc",
-				"extern/fmt/test/header-only-test.cc",
-				"extern/fmt/test/module-test.cc",
-				"extern/fmt/test/no-builtin-types-test.cc",
-				"extern/fmt/test/noexception-test.cc",
-				"extern/fmt/test/os-test.cc",
-				"extern/fmt/test/ostream-test.cc",
-				"extern/fmt/test/perf-sanity.cc",
-				"extern/fmt/test/posix-mock-test.cc",
-				"extern/fmt/test/printf-test.cc",
-				"extern/fmt/test/ranges-odr-test.cc",
-				"extern/fmt/test/ranges-test.cc",
-				"extern/fmt/test/scan-test.cc",
-				"extern/fmt/test/static-export-test/CMakeLists.txt",
-				"extern/fmt/test/static-export-test/library.cc",
-				"extern/fmt/test/static-export-test/main.cc",
-				"extern/fmt/test/std-test.cc",
-				"extern/fmt/test/test-main.cc",
-				"extern/fmt/test/unicode-test.cc",
-				extern/fmt/test/util.cc,
-				"extern/fmt/test/xchar-test.cc",
+				extern/fmt/src/format.cc,
+				extern/fmt/src/os.cc,
+				main.mm,
+				Shaders/Metal/PostProcess/ChromaShift.metal,
+				Shaders/Metal/PostProcess/DownsampleBlur.metal,
+				Shaders/Metal/PostProcess/DualKawaseBlur.metal,
+				Shaders/Metal/PostProcess/Ghosts.metal,
+				Shaders/Metal/PostProcess/Glare.metal,
+				Shaders/Metal/PostProcess/HaloFlare.metal,
+				Shaders/Metal/PostProcess/Mix.metal,
+				Shaders/Metal/PostProcess/Rescale.metal,
+				Shaders/Metal/PostProcess/ScreenPass.metal,
+				Shaders/Metal/Scene.metal,
+				v_datapackage.cpp,
+				v_metalbackend.mm,
+				v_platform.mm,
 			);
 			target = B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B8AAC7E02F12D74B00EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */ = {
+		B8CFCCFF2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
 				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib = (CodeSignOnCopy, );
@@ -171,13 +89,13 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */ = {
+		B8CFCCDF2F15BFE600E4738E /* ValhallaEngine */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B8AAC7DA2F12CD7800EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Valhalla Engine Editor" target */,
-				B8AAC7E02F12D74B00EE20AF /* Exceptions for "Valhalla Engine Editor" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */,
+				B8CFCCFE2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Valhalla Engine Editor" target */,
+				B8CFCCFF2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */,
 			);
-			path = "Valhalla Engine Editor";
+			path = ValhallaEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -201,7 +119,7 @@
 		B86FC1C62F05AB70007722A5 = {
 			isa = PBXGroup;
 			children = (
-				B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */,
+				B8CFCCDF2F15BFE600E4738E /* ValhallaEngine */,
 				B86FC1E22F05AD59007722A5 /* Frameworks */,
 				B86FC1D62F05ACF8007722A5 /* Products */,
 			);
@@ -243,9 +161,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B86FC1D72F05ACF8007722A5 /* Valhalla Engine Editor */,
 			);
 			name = "Valhalla Engine Editor";
 			packageProductDependencies = (
@@ -394,8 +309,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fbxsdk/include",
-					"$(PROJECT_DIR)/fmt/include",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/include",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fmt/include",
 				);
 				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
@@ -413,46 +328,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fbxsdk/lib",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/legacy/release",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
@@ -539,8 +418,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fbxsdk/include",
-					"$(PROJECT_DIR)/fmt/include",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/include",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fmt/include",
 				);
 				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
@@ -558,46 +437,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fbxsdk/lib",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/clang/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/debug",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
-					"$(PROJECT_DIR)/Valhalla\\ Engine\\ Editor/extern/fbxsdk/lib/legacy/release",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/clang/release",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/clang/debug",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/legacy/debug",
+					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/lib/legacy/release",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
