@@ -37,6 +37,10 @@ using namespace ValhallaEngine::Platform;
     
     NSArray<id<MTLBuffer>>* VVertexBuffers;
     
+    id<MTLBuffer> VSceneLightingBuffer;
+    
+    id<MTLBuffer> VLightDataBuffer;
+    
     id<MTLRenderPipelineState> VRenderPipelineState;
 }
 
@@ -167,7 +171,7 @@ using namespace ValhallaEngine::Platform;
     NSAssert(false, ErrorString);
 }
 
-- (void) WaitOnSharedEvent:(id<MTLSharedEvent>) SharedEvent
+- (void) WaitOnSharedEvent:(nonnull id<MTLSharedEvent>) SharedEvent
            ForEarlierFrame:(uint64_t) EarlierFrameNumber
 {
     // Ten Milliseconds
@@ -179,6 +183,92 @@ using namespace ValhallaEngine::Platform;
     {
         NSLog(@"No signal from frame %llu to shared event after %llums", EarlierFrameNumber, WaitTime);
     }
+}
+
+- (void) renderFrameToView:(nonnull MTKView*) view
+{
+    NSAssert(view.device == VCommandQueue.device, @"The Valhalla Metal View Devive is not the same as the render device.");
+    
+    MTLRenderPassDescriptor* RenderPassDesc = view.currentRenderPassDescriptor;
+    
+    if (nil == RenderPassDesc)
+    {
+        ErrorMessageBox("Valhalla MetalRHI Error", "RenderPassDescriptor was null. Ceasing function!");
+        return;
+    }
+    
+    VFrameNumber += 1;
+    
+    const uint32_t FrameIndex = VFrameNumber % MaxFramesInFlight;
+    NSString* Label = [NSString stringWithFormat:@"Frame: %llu", VFrameNumber];
+    
+    if (VFrameNumber > MaxFramesInFlight)
+    {
+        [self WaitOnSharedEvent:VSharedEvent ForEarlierFrame:VFrameNumber - MaxFramesInFlight];
+    }
+    
+    id<MTLCommandBuffer> CommandBuffer = [VCommandQueue commandBuffer];
+    CommandBuffer.label = Label;
+    
+    id<MTLRenderCommandEncoder> Encoder;
+    Encoder = [CommandBuffer renderCommandEncoderWithDescriptor:RenderPassDesc];
+    
+    [self SetViewportSize:VViewportSize ForRenderEncoder:Encoder];
+    
+    [Encoder setRenderPipelineState:VRenderPipelineState];
+    
+    /// Vertex buffers
+    /// --------------------
+    
+    id<MTLBuffer> VertexBuffer = VVertexBuffers[FrameIndex];
+    
+    id<MTLBuffer> SceneDataBuffer = VSceneDataBuffer;
+    
+    /// Fragment buffers
+    /// --------------------
+    
+    id<MTLBuffer> SceneLightingBuffer = VSceneLightingBuffer;
+    
+    id<MTLBuffer> LightDataBuffer = VLightDataBuffer;
+    
+    /// Setting vertex buffers
+    
+    [Encoder setVertexBuffer:VertexBuffer offset:0 atIndex:0];
+    [Encoder setVertexBuffer:SceneDataBuffer offset:0 atIndex:1];
+    
+    /// Setting fragment buffers
+    
+    [Encoder setFragmentBuffer:SceneLightingBuffer offset:0 atIndex:0];
+    [Encoder setFragmentBuffer:LightDataBuffer offset:0 atIndex:1];
+    
+    // This is a placeholder for later implementing 3D objects
+    [Encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
+    
+    [Encoder endEncoding];
+    
+    [CommandBuffer presentDrawable:view.currentDrawable];
+    
+    [CommandBuffer encodeSignalEvent:VSharedEvent value:VFrameNumber];
+    
+    [CommandBuffer commit];
+}
+
+- (void) SetViewportSize:(simd_uint2) size
+        ForRenderEncoder:(nonnull id<MTLRenderCommandEncoder>) RenderPassEncoder
+{
+    // Get it? GL like OpenGL?! HAHAHAHAHAHA!
+    // I'm going insane can't you tell?
+    // ---------------------------------------
+    // Okay on a serious note this is for the Viewport we're going resize
+    MTLViewport ValhallaGLory;
+    ValhallaGLory.originX   = 0.0;
+    ValhallaGLory.originY   = 0.0;
+    ValhallaGLory.znear     = 0.0;
+    ValhallaGLory.zfar      = 1.0;
+    ValhallaGLory.width     = (double)size.x;   // Converting to a double
+    ValhallaGLory.height    = (double)size.y;   // Converting to a double
+    
+    [RenderPassEncoder setViewport:ValhallaGLory];
 }
 
 @end
