@@ -70,6 +70,14 @@
         number:(long) number
          error:(nullable NSError*) error;
 
+- (void) WaitOnSharedEvent:(nonnull id<MTLSharedEvent>) SharedEvent
+           ForEarlierFrame:(uint64_t) EarlierFrameNumber;
+
+- (void) renderFrameToView:(nonnull MTKView*) view;
+
+- (void) SetViewportSize:(simd_uint2) size
+        ForRenderEncoder:(nonnull id<MTLRenderCommandEncoder>) RenderPassEncoder;
+
 @end
 
 #endif
