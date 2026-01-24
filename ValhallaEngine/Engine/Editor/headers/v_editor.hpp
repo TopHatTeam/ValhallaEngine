@@ -11,8 +11,14 @@
 
 #pragma once
 #include <QtCore/QtCore>
+#include <QtGui/QAction>
 #include <QtWidgets/QtWidgets>
 #include <QtQuick/QQuickWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
+#include <QtWidgets/QApplication>
 
 
 namespace ValhallaEngine::Editor
@@ -30,6 +36,54 @@ namespace ValhallaEngine::Editor
         ~VEditor3DViewer();
     protected:
         QQuickWindow* WindowViewer;
+    };
+
+    class VEditorWindow 
+    {
+    public:
+        VEditorWindow(QMainWindow* MainWindow);
+        ~VEditorWindow();
+
+        // The ultimate cheat code for C++
+        // This is allows us unlimited access!
+        // This cannot be safe? Right? 
+        friend class VEditor3DViewer;
+    protected:
+        // --- Menu Bar ---
+        QMenuBar* MenuBar;
+
+        // --- Status Bar ---
+        QStatusBar* StatusBar;
+
+        // --- Menus ---
+        QMenu* ValhallaEngineMenu;
+        QMenu* BuildMenu;
+        QMenu* EditMenu;
+        
+        // --- Valhalla Engine Actions ---
+        QAction* About;
+        QAction* Quit;
+        QAction* NewProject;
+        QAction* OpenProject;
+        QAction* SaveProject;
+        QAction* SaveAs;
+        QAction* WindowsBuild;
+        QAction* MacOSBuild;
+        QAction* LinuxBuild;
+        QAction* CompileSource;
+
+        // --- Edit Actions ---
+        QAction* Copy;
+        QAction* Paste;
+        QAction* Delete;
+
+        // --- Widgets --- 
+        QWidget* CentralWidget;
+        QWidget* TabClasses;
+        QWidget* TabAssets;
+
+        // --- Tab Widget ---
+        QTabWidget* TabEditor;
     };
 
     // --- Variables ---
