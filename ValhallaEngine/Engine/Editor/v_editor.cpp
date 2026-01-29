@@ -15,12 +15,12 @@
 
 using namespace ValhallaEngine::Editor;
 
-void Editor::StartEditor()
+void StartEditor()
 {
     // Place holder
 }
 
-void Editor::DisplaySplashScreen()
+void DisplaySplashScreen()
 {
     // Placeholder
 }
@@ -72,7 +72,7 @@ VEditorWindow::VEditorWindow(QMainWindow* MainWindow)
 
     // --- Set Object Names --- 
     About->setObjectName("About");
-    Quit->SetObjectName("Quit");
+    Quit->setObjectName("Quit");
     NewProject->setObjectName("NewProject");
     OpenProject->setObjectName("OpenProject");
     SaveProject->setObjectName("SaveProject");
@@ -143,6 +143,9 @@ VEditorWindow::VEditorWindow(QMainWindow* MainWindow)
     ValhallaEngineMenu->setTitle(QCoreApplication::translate("Valhalla Engine Editor", "Valhalla Engine", nullptr));
     BuildMenu->setTitle(QCoreApplication::translate("Valhalla Engine Editor", "Build", nullptr));
     EditMenu->setTitle(QCoreApplication::translate("Valhalla Engine Editor", "Edit", nullptr));
+    
+    // --- Actions functionality ---
+    connect(Quit, &QAction::triggered, this, &VEditorWindow::QuitApplication);
 }
 
 VEditorWindow::~VEditorWindow()
@@ -183,3 +186,9 @@ VEditorWindow::~VEditorWindow()
     // --- Cleaning up Tab Widget ---
     delete TabEditor;
 }
+
+void VEditorWindow::QuitApplication()
+{
+    QCoreApplication::quit();
+}
+
