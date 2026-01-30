@@ -22,8 +22,4 @@
 
 #endif
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
-@property (nonatomic, strong) NSWindow* window;
-@end
-
 #endif
