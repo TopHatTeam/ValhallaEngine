@@ -38,11 +38,12 @@ namespace ValhallaEngine::Editor
         QQuickWindow* WindowViewer;
     };
 
-    class VEditorWindow 
+    class VEditorWindow : public QMainWindow
     {
+        Q_OBJECT
     public:
         VEditorWindow(QMainWindow* MainWindow);
-        ~VEditorWindow();
+        ~VEditorWindow() override;
 
         // The ultimate cheat code for C++
         // This is allows us unlimited access!
@@ -84,6 +85,8 @@ namespace ValhallaEngine::Editor
 
         // --- Tab Widget ---
         QTabWidget* TabEditor;
+    public:
+        void QuitApplication();
     };
 
     // --- Variables ---
