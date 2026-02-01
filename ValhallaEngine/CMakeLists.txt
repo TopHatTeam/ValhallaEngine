@@ -26,7 +26,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-
 set(Qt6_DIR "$ENV{HOME}/Qt/6.10.1/macos/lib/cmake/Qt6")
 
 find_package(Qt6 REQUIRED COMPONENTS Core)
@@ -45,6 +44,15 @@ endif()
 qt_standard_project_setup()
 
 add_subdirectory(extern/fmt)    # fmt
+
+if(APPLE)
+add_executable(${PROJECT_NAME} MACOSX_BUNDLE
+    Engine/Editor/v_editor.cpp
+    Engine/Editor/headers/v_editor.hpp
+    main.mm
+)
+endif()
+
 add_subdirectory(Engine)
 add_subdirectory(Engine/Editor)
 
@@ -53,21 +61,13 @@ if(APPLE)
     add_subdirectory(Engine/WindowCore/Mac)
 endif()
 
-if(APPLE)
-add_executable(${PROJECT_NAME}
-    Engine/Editor/v_editor.cpp
-    Engine/Editor/headers/v_editor.hpp
-    main.mm
-)
-endif()
-
 if(WIN32)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     fmt::fmt
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
-    Qt6:Quick
+    Qt6::Quick
     Vulkan::Vulkan
 )
 endif()
@@ -90,5 +90,26 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt6::Gui
     Qt6::Widgets
     Qt6::Quick
+    ValhallaEngineEditor
 )
+endif()
+
+qt_add_resources(${PROJECT_NAME} "ValhallaImages"
+    PREFIX "/"
+    FILES
+        assets/VE_SPLASH_02.png
+)
+
+if(APPLE)
+    set_source_files_properties(assets/ValhallaEngine.icns PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources"
+    )
+    
+    target_sources(${PROJECT_NAME} PRIVATE
+        assets/ValhallaEngine.icns
+    )
+    
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        MACOSX_BUNDLE_ICON_FILE ValhallaEngine.icns
+    )
 endif()
