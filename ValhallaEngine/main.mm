@@ -18,9 +18,20 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
     QPixmap pixmap(":/assets/VE_SPLASH_02.png");
+    if (pixmap.isNull())
+    {
+        qDebug() << "ERROR: Splash image failed to load";
+    }
     QSplashScreen splash(pixmap);
+    splash.setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
     splash.show();
-    app.processEvents();
+    splash.raise();
+    splash.showMessage("Loading Editor...", Qt::AlignHCenter | Qt::AlignBottom);
+    QCoreApplication::processEvents();
+    QThread::sleep(2);
+    splash.showMessage("Starting Editor...", Qt::AlignHCenter | Qt::AlignBottom);
+    QCoreApplication::processEvents();
+    QThread::sleep(2);
     QMainWindow Window;
     VEditorWindow* Editor = new VEditorWindow(&Window);
     Window.show();
