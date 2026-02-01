@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>VE_SPLASH_02.png</file>
+    </qresource>
+</RCC>
