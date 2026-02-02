@@ -1,4 +1,4 @@
-<img src="assets/Assets.xcassets/AppIcon.appiconset/ValhallaEngineIcon_512x512.png" width=200>
+<img src="ValhallaEngine/assets/Assets.xcassets/AppIcon.appiconset/ValhallaEngineIcon_512x512.png" width=200>
 
 # Valhalla Engine 
 
