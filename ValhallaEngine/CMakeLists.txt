@@ -26,7 +26,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
+if(APPLE)
 set(Qt6_DIR "$ENV{HOME}/Qt/6.10.1/macos/lib/cmake/Qt6")
+endif()
+
+if(WIN32)
+    set(Qt6_DIR "C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6")
+endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
@@ -50,6 +56,12 @@ add_executable(${PROJECT_NAME} MACOSX_BUNDLE
     Engine/Editor/v_editor.cpp
     Engine/Editor/headers/v_editor.hpp
     main.mm
+)
+endif()
+
+if(WIN32)
+add_executable(${PROJECT_NAME}
+    main.cpp
 )
 endif()
 
