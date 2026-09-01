@@ -19,7 +19,7 @@ layout (location = 0) in vec3 uLightDirection;
 layout (location = 1) in vec3 uNormalVector;
 layout (location = 2) in vec3 uAmbientColorInt;  // Intensity
 layout (location = 3) in vec3 uDiffuseColorInt;  // Intensity
-layout (location = 4) in vec3 uSpecularColorInt; // Intensity
+layout (location = 4) in vec3 uSpecularInt;      // Intensity
 layout (location = 5) in vec3 uViewDirection;
 layout (location = 6) in float uShinyInt;        // Intensity
 
@@ -34,6 +34,21 @@ void main()
 
     float DiffuseDot = max(dot(L, N), 0.0);
     vec3 uDiffuse = uDiffuseColorInt * DiffuseDot;
+
+    // We're going to use the Halfway Vector Calculation 
+    // used by the Binn-Phong method 
+    // It supposely looks better quality
+    // Which we care about (performance + quality)
+    vec3 H = normalize(L + V); 
+
+
+    float SpecularDot = max(dot(N, H), 0.0);
+    float SpecularFactor = pow(SpecularDot, uShinyInt);
+    vec3 vSpecular = uSpecularInt * SpecularFactor;
+
+    vColor = uAmbientColorInt + uDiffuse + vSpecular;
+}
+
 
     // We're going to use the Halfway Vector Calculation 
     // used by the Binn-Phong method 
