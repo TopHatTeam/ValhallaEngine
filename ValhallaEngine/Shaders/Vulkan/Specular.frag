@@ -2,14 +2,14 @@
 //
 //  MIT License
 //
-//  ChromaShift.frag
+//  Specular.frag
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/16/26.
 //
 // -------------------------------------------------
 
-// Recreated this specular shader using the phong relfection method
+// Recreated this specular shader using the phong reflection method
 // https://en.wikipedia.org/wiki/Phong_reflection_model 
 
 #version 450
@@ -32,35 +32,21 @@ void main()
     vec3 L = normalize(uLightDirection);
     vec3 V = normalize(uViewDirection);
 
+    // We're going to use the Halfway Vector Calculation 
+    // used by the Binn-Phong method 
+    // It supposely looks better quality
+    // Which we care about (performance + quality)
+    vec3 H = normalize(L + V); 
+
+    // Calculate the diffuse and specular components 
     float DiffuseDot = max(dot(L, N), 0.0);
-    vec3 uDiffuse = uDiffuseColorInt * DiffuseDot;
-
-    // We're going to use the Halfway Vector Calculation 
-    // used by the Binn-Phong method 
-    // It supposely looks better quality
-    // Which we care about (performance + quality)
-    vec3 H = normalize(L + V); 
-
-
     float SpecularDot = max(dot(N, H), 0.0);
     float SpecularFactor = pow(SpecularDot, uShinyInt);
+
+    vec3 vDiffuse = uDiffuseColorInt * DiffuseDot;
     vec3 vSpecular = uSpecularInt * SpecularFactor;
+    
 
-    vColor = uAmbientColorInt + uDiffuse + vSpecular;
-}
-
-
-    // We're going to use the Halfway Vector Calculation 
-    // used by the Binn-Phong method 
-    // It supposely looks better quality
-    // Which we care about (performance + quality)
-    vec3 H = normalize(L + V); 
-
-
-    float SpecularDot = max(dot(N, H), 0.0);
-    float SpecularFactor = pow(SpecularDot, uShinyInt);
-    vec3 vSpecular = uSpecularInt * SpecularFactor;
-
-    vColor = uAmbientColorInt + uDiffuse + vSpecular;
+    vColor = uAmbientColorInt + vDiffuse + vSpecular;
 }
 
