@@ -66,7 +66,7 @@ constexpr inline const char* Vk_ErrorToString(VkResult result)
 
 #define VK_CHECK(x)                                             \
 {                                                               \
-    VKResult ret = x;                                           \
+    VkResult ret = x;                                           \
     if (ret != VK_SUCCESS)                                      \
     {                                                           \
         fmt::print("VK: {} - {}", Vk_ErrorToString(ret), #x);   \
@@ -199,6 +199,42 @@ namespace ValhallaEngine::Vulkan
          */
         static vector<char> ReadShaderFile(const string& filepath);
     };
+
+    static bool IsExtensionAvailable(const vector<VkExtensionProperties>& properties, const char* extension);
+
+    static bool IsDeviceSuitable(VkPhysicalDevice device);
+
+    static bool CheckDeviceExtensionsSupport(VkPhysicalDevice device);
+
+    static bool InitVulkanRHI(void);
+
+    static bool isHostVisible(void)
+    {
+        return VUsage != VMU_GPU_ONLY;
+    }
+
+    VVulkanQueueFamilyIndices FindQueueFamilies(VkPhysicalDevice device);
+
+    VVulkanSwapChainSupportDetails QuerySwapchainSupport(VkPhysicalDevice device);
+
+    VVulkanSwapChainSupportDetails GetSwapchainSupport() 
+    {
+        return QuerySwapchainSupport(VPhysicalDevice);
+	}
+
+    VVulkanQueueFamilyIndices FindPhysicalQueueFamilies()
+    {
+        return FindQueueFamilies(VPhysicalDevice);
+    }
+
+    /**
+    * @brief This function is used for aquiring a swapchain image to render the next frame
+    * @param ImageIndex -> The Index of the image in the swapchain we're going to render
+    * @note This function is waiting for the GPU to finish rendering the previous image
+    */
+    VkResult AcquireNextImage(VkUint32* ImageIndex);
+
+    VkFormat FindSupportFormat(const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 
     inline VkDevice                     VDevice             = VK_NULL_HANDLE;
     inline VkPhysicalDevice             VPhysicalDevice     = VK_NULL_HANDLE;
