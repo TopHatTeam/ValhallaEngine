@@ -58,6 +58,7 @@ typedef struct
 typedef struct
 {
     simd_float3  LightPosition;
+    
     simd_float3  LightColor;
     float        LightIntensity;
     

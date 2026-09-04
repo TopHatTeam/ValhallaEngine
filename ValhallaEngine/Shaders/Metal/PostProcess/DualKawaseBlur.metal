@@ -1,9 +1,13 @@
+// -------------------------------------------------
+//
+//  MIT License
 //
 //  DualKawaseBlur.metal
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/1/26.
 //
+// -------------------------------------------------
 
 #include <metal_stdlib>
 using namespace metal;

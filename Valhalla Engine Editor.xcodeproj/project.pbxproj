@@ -8,52 +8,124 @@
 
 /* Begin PBXBuildFile section */
 		B8498CCE2F1133A3006B5040 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8498CCD2F1133A3006B5040 /* MetalKit.framework */; };
+		B857870F2F1932F700AECC93 /* QtQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87933052F18412600CEE18F /* QtQuick.framework */; };
+		B85787102F19333A00AECC93 /* QtDBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87933162F188A8F00CEE18F /* QtDBus.framework */; };
+		B85787112F19334300AECC93 /* QtDBus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87933162F188A8F00CEE18F /* QtDBus.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787132F19505C00AECC93 /* QtSql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85787122F19505C00AECC93 /* QtSql.framework */; };
+		B85787162F19505F00AECC93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3EA692F0743A70011171D /* QuartzCore.framework */; };
+		B85787182F1958B500AECC93 /* QtSql.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85787122F19505C00AECC93 /* QtSql.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787192F1958B500AECC93 /* QtQml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786F22F19315000AECC93 /* QtQml.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871A2F1958B500AECC93 /* QtQmlCompiler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786EC2F19315000AECC93 /* QtQmlCompiler.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871B2F1958B500AECC93 /* QtQmlCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786EF2F19315000AECC93 /* QtQmlCore.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871C2F1958B500AECC93 /* QtQmlLocalStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786EE2F19315000AECC93 /* QtQmlLocalStorage.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871D2F1958B500AECC93 /* QtQmlNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786F12F19315000AECC93 /* QtQmlNetwork.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871E2F1958B500AECC93 /* QtQmlWorkerScript.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786ED2F19315000AECC93 /* QtQmlWorkerScript.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B857871F2F1958B500AECC93 /* QtQmlXmlListModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786F02F19315000AECC93 /* QtQmlXmlListModel.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787202F1958B500AECC93 /* QtQmlModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85786E92F19310900AECC93 /* QtQmlModels.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787212F1958B500AECC93 /* QtQmlMeta.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B879331D2F188B7F00CEE18F /* QtQmlMeta.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787222F1958C700AECC93 /* QtNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B857870B2F19320C00AECC93 /* QtNetwork.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B85787242F19591800AECC93 /* QtOpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85787232F19591800AECC93 /* QtOpenGL.framework */; };
+		B85787272F19592800AECC93 /* QtOpenGL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85787232F19591800AECC93 /* QtOpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B86FC1E42F05AD59007722A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FC1E32F05AD59007722A5 /* Cocoa.framework */; platformFilters = (macos, ); };
 		B86FC1ED2F05B80E007722A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FC1E72F05ADA8007722A5 /* Foundation.framework */; };
+		B87933072F18412600CEE18F /* QtQuick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87933052F18412600CEE18F /* QtQuick.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B87933102F1889F900CEE18F /* QtGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F82F18041700CEE18F /* QtGui.framework */; };
+		B87933112F1889F900CEE18F /* QtGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F82F18041700CEE18F /* QtGui.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B87933122F1889FA00CEE18F /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F52F1803D800CEE18F /* QtCore.framework */; };
+		B87933132F1889FA00CEE18F /* QtCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F52F1803D800CEE18F /* QtCore.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B87933142F188A0000CEE18F /* QtWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F72F18041700CEE18F /* QtWidgets.framework */; };
+		B87933152F188A0000CEE18F /* QtWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87932F72F18041700CEE18F /* QtWidgets.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B8A3E93B2F0739F70011171D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3E93A2F0739F70011171D /* Metal.framework */; };
-		B8A3EA6A2F0743A70011171D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3EA692F0743A70011171D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */ = {
+		B87933082F18412600CEE18F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B85787272F19592800AECC93 /* QtOpenGL.framework in Embed Frameworks */,
+				B85787222F1958C700AECC93 /* QtNetwork.framework in Embed Frameworks */,
+				B85787182F1958B500AECC93 /* QtSql.framework in Embed Frameworks */,
+				B85787192F1958B500AECC93 /* QtQml.framework in Embed Frameworks */,
+				B857871A2F1958B500AECC93 /* QtQmlCompiler.framework in Embed Frameworks */,
+				B857871B2F1958B500AECC93 /* QtQmlCore.framework in Embed Frameworks */,
+				B857871C2F1958B500AECC93 /* QtQmlLocalStorage.framework in Embed Frameworks */,
+				B857871D2F1958B500AECC93 /* QtQmlNetwork.framework in Embed Frameworks */,
+				B857871E2F1958B500AECC93 /* QtQmlWorkerScript.framework in Embed Frameworks */,
+				B857871F2F1958B500AECC93 /* QtQmlXmlListModel.framework in Embed Frameworks */,
+				B85787202F1958B500AECC93 /* QtQmlModels.framework in Embed Frameworks */,
+				B85787212F1958B500AECC93 /* QtQmlMeta.framework in Embed Frameworks */,
+				B85787112F19334300AECC93 /* QtDBus.framework in Embed Frameworks */,
+				B87933132F1889FA00CEE18F /* QtCore.framework in Embed Frameworks */,
+				B87933072F18412600CEE18F /* QtQuick.framework in Embed Frameworks */,
+				B87933112F1889F900CEE18F /* QtGui.framework in Embed Frameworks */,
+				B87933152F188A0000CEE18F /* QtWidgets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AAC7DF2F12D74B00EE20AF /* Embed Libraries (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
 			);
-			name = "Embed Libraries";
+			name = "Embed Libraries (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B8171CA62F1BE03F006489BE /* libqcocoa.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = libqcocoa.dylib; path = ../../Qt/6.10.1/macos/plugins/platforms/libqcocoa.dylib; sourceTree = "<group>"; };
 		B8498CCD2F1133A3006B5040 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		B85786E92F19310900AECC93 /* QtQmlModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlModels.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlModels.framework; sourceTree = "<group>"; };
+		B85786EC2F19315000AECC93 /* QtQmlCompiler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlCompiler.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlCompiler.framework; sourceTree = "<group>"; };
+		B85786ED2F19315000AECC93 /* QtQmlWorkerScript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlWorkerScript.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlWorkerScript.framework; sourceTree = "<group>"; };
+		B85786EE2F19315000AECC93 /* QtQmlLocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlLocalStorage.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlLocalStorage.framework; sourceTree = "<group>"; };
+		B85786EF2F19315000AECC93 /* QtQmlCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlCore.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlCore.framework; sourceTree = "<group>"; };
+		B85786F02F19315000AECC93 /* QtQmlXmlListModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlXmlListModel.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlXmlListModel.framework; sourceTree = "<group>"; };
+		B85786F12F19315000AECC93 /* QtQmlNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlNetwork.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlNetwork.framework; sourceTree = "<group>"; };
+		B85786F22F19315000AECC93 /* QtQml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQml.framework; path = ../../Qt/6.10.1/macos/lib/QtQml.framework; sourceTree = "<group>"; };
+		B857870B2F19320C00AECC93 /* QtNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtNetwork.framework; path = ../../Qt/6.10.1/macos/lib/QtNetwork.framework; sourceTree = "<group>"; };
+		B85787122F19505C00AECC93 /* QtSql.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtSql.framework; path = ../../Qt/6.10.1/macos/lib/QtSql.framework; sourceTree = "<group>"; };
+		B85787232F19591800AECC93 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = ../../Qt/6.10.1/macos/lib/QtOpenGL.framework; sourceTree = "<group>"; };
 		B86FC1D52F05ACF8007722A5 /* Valhalla Engine Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valhalla Engine Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86FC1E32F05AD59007722A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B86FC1E52F05AD83007722A5 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/iOSSupport/System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		B86FC1E72F05ADA8007722A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B87932F52F1803D800CEE18F /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../Qt/6.10.1/macos/lib/QtCore.framework; sourceTree = "<group>"; };
+		B87932F72F18041700CEE18F /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = ../../Qt/6.10.1/macos/lib/QtWidgets.framework; sourceTree = "<group>"; };
+		B87932F82F18041700CEE18F /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = ../../Qt/6.10.1/macos/lib/QtGui.framework; sourceTree = "<group>"; };
+		B87933052F18412600CEE18F /* QtQuick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQuick.framework; path = ../../Qt/6.10.1/macos/lib/QtQuick.framework; sourceTree = "<group>"; };
+		B87933162F188A8F00CEE18F /* QtDBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtDBus.framework; path = ../../Qt/6.10.1/macos/lib/QtDBus.framework; sourceTree = "<group>"; };
+		B879331D2F188B7F00CEE18F /* QtQmlMeta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtQmlMeta.framework; path = ../../Qt/6.10.1/macos/lib/QtQmlMeta.framework; sourceTree = "<group>"; };
 		B8A3E93A2F0739F70011171D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		B8A3EA692F0743A70011171D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B8EE5E7A2F2E612800784690 /* CompilerIdC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CompilerIdC.xcodeproj; sourceTree = "<group>"; };
+		B8EE5EE62F2E612A00784690 /* CompilerIdCXX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CompilerIdCXX.xcodeproj; sourceTree = "<group>"; };
+		B8EE5F1F2F2E612B00784690 /* CompilerIdOBJCXX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CompilerIdOBJCXX.xcodeproj; sourceTree = "<group>"; };
+		B8EE5FB12F2E613000784690 /* ValhallaEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ValhallaEngine.xcodeproj; sourceTree = "<group>"; };
+		B8EE5FBC2F2E613000784690 /* FMT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FMT.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		B8CFCCFE2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Valhalla Engine Editor" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
-				extern/fbxsdk/lib/clang/debug/libalembic.a,
-				extern/fbxsdk/lib/clang/debug/libfbxsdk.a,
-				extern/fbxsdk/lib/clang/debug/libfbxsdk.dylib,
-				extern/fbxsdk/lib/clang/release/libalembic.a,
-				extern/fbxsdk/lib/clang/release/libfbxsdk.a,
-				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib,
-				extern/fbxsdk/lib/legacy/debug/libalembic.a,
-				extern/fbxsdk/lib/legacy/debug/libfbxsdk.a,
-				extern/fbxsdk/lib/legacy/debug/libfbxsdk.dylib,
-				extern/fbxsdk/lib/legacy/release/libalembic.a,
-				extern/fbxsdk/lib/legacy/release/libfbxsdk.a,
-				extern/fbxsdk/lib/legacy/release/libfbxsdk.dylib,
+				assets/Assets.xcassets,
+				Engine/CMakeLists.txt,
+				Engine/Editor/CMakeLists.txt,
+				Engine/Editor/v_editor.cpp,
+				Engine/GraphicBackend/Metal/v_metalbackend.mm,
+				Engine/GraphicBackend/Vulkan/v_vulkanbackend.cpp,
+				Engine/LevelCore/v_level.cpp,
+				Engine/PackageCore/v_datapackage.cpp,
+				Engine/v_platform.mm,
+				Engine/WindowCore/Mac/CMakeLists.txt,
+				Engine/WindowCore/Mac/VMac.mm,
 				extern/fmt/src/format.cc,
 				extern/fmt/src/os.cc,
 				main.mm,
@@ -67,33 +139,16 @@
 				Shaders/Metal/PostProcess/Rescale.metal,
 				Shaders/Metal/PostProcess/ScreenPass.metal,
 				Shaders/Metal/Scene.metal,
-				v_datapackage.cpp,
-				v_metalbackend.mm,
-				v_platform.mm,
 			);
 			target = B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B8CFCCFF2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib = (CodeSignOnCopy, );
-			};
-			buildPhase = B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */;
-			membershipExceptions = (
-				extern/fbxsdk/lib/clang/release/libfbxsdk.dylib,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B8CFCCDF2F15BFE600E4738E /* ValhallaEngine */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				B8CFCCFE2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Valhalla Engine Editor" target */,
-				B8CFCCFF2F15BFE600E4738E /* Exceptions for "ValhallaEngine" folder in "Embed Libraries" phase from "Valhalla Engine Editor" target */,
 			);
 			path = ValhallaEngine;
 			sourceTree = "<group>";
@@ -105,10 +160,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85787242F19591800AECC93 /* QtOpenGL.framework in Frameworks */,
+				B85787102F19333A00AECC93 /* QtDBus.framework in Frameworks */,
+				B857870F2F1932F700AECC93 /* QtQuick.framework in Frameworks */,
 				B8498CCE2F1133A3006B5040 /* MetalKit.framework in Frameworks */,
-				B8A3EA6A2F0743A70011171D /* QuartzCore.framework in Frameworks */,
+				B85787162F19505F00AECC93 /* QuartzCore.framework in Frameworks */,
+				B85787132F19505C00AECC93 /* QtSql.framework in Frameworks */,
+				B87933102F1889F900CEE18F /* QtGui.framework in Frameworks */,
 				B86FC1ED2F05B80E007722A5 /* Foundation.framework in Frameworks */,
+				B87933122F1889FA00CEE18F /* QtCore.framework in Frameworks */,
 				B8A3E93B2F0739F70011171D /* Metal.framework in Frameworks */,
+				B87933142F188A0000CEE18F /* QtWidgets.framework in Frameworks */,
 				B86FC1E42F05AD59007722A5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +198,24 @@
 		B86FC1E22F05AD59007722A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8171CA62F1BE03F006489BE /* libqcocoa.dylib */,
+				B85787232F19591800AECC93 /* QtOpenGL.framework */,
+				B85787122F19505C00AECC93 /* QtSql.framework */,
+				B857870B2F19320C00AECC93 /* QtNetwork.framework */,
+				B85786F22F19315000AECC93 /* QtQml.framework */,
+				B85786EC2F19315000AECC93 /* QtQmlCompiler.framework */,
+				B85786EF2F19315000AECC93 /* QtQmlCore.framework */,
+				B85786EE2F19315000AECC93 /* QtQmlLocalStorage.framework */,
+				B85786F12F19315000AECC93 /* QtQmlNetwork.framework */,
+				B85786ED2F19315000AECC93 /* QtQmlWorkerScript.framework */,
+				B85786F02F19315000AECC93 /* QtQmlXmlListModel.framework */,
+				B85786E92F19310900AECC93 /* QtQmlModels.framework */,
+				B879331D2F188B7F00CEE18F /* QtQmlMeta.framework */,
+				B87933162F188A8F00CEE18F /* QtDBus.framework */,
+				B87933052F18412600CEE18F /* QtQuick.framework */,
+				B87932F82F18041700CEE18F /* QtGui.framework */,
+				B87932F72F18041700CEE18F /* QtWidgets.framework */,
+				B87932F52F1803D800CEE18F /* QtCore.framework */,
 				B8498CCD2F1133A3006B5040 /* MetalKit.framework */,
 				B8A3EA692F0743A70011171D /* QuartzCore.framework */,
 				B8A3E93A2F0739F70011171D /* Metal.framework */,
@@ -144,6 +224,41 @@
 				B86FC1E32F05AD59007722A5 /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8EE5E822F2E612800784690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8EE5EE92F2E612A00784690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8EE5F212F2E612B00784690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8EE5FB22F2E613000784690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8EE5FBD2F2E613000784690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +270,10 @@
 			buildPhases = (
 				B86FC1D12F05ACF8007722A5 /* Sources */,
 				B86FC1D22F05ACF8007722A5 /* Frameworks */,
+				B87933082F18412600CEE18F /* Embed Frameworks */,
+				B8AAC7DF2F12D74B00EE20AF /* Embed Libraries (1 item) */,
 				B86FC1D32F05ACF8007722A5 /* Resources */,
-				B8AAC7DF2F12D74B00EE20AF /* Embed Libraries */,
+				B86093E52F1C212F00AD0B9C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,6 +313,28 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B86FC1D62F05ACF8007722A5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B8EE5E822F2E612800784690 /* Products */;
+					ProjectRef = B8EE5E7A2F2E612800784690 /* CompilerIdC.xcodeproj */;
+				},
+				{
+					ProductGroup = B8EE5EE92F2E612A00784690 /* Products */;
+					ProjectRef = B8EE5EE62F2E612A00784690 /* CompilerIdCXX.xcodeproj */;
+				},
+				{
+					ProductGroup = B8EE5F212F2E612B00784690 /* Products */;
+					ProjectRef = B8EE5F1F2F2E612B00784690 /* CompilerIdOBJCXX.xcodeproj */;
+				},
+				{
+					ProductGroup = B8EE5FBD2F2E613000784690 /* Products */;
+					ProjectRef = B8EE5FBC2F2E613000784690 /* FMT.xcodeproj */;
+				},
+				{
+					ProductGroup = B8EE5FB22F2E613000784690 /* Products */;
+					ProjectRef = B8EE5FB12F2E613000784690 /* ValhallaEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B86FC1D42F05ACF8007722A5 /* Valhalla Engine Editor */,
@@ -212,6 +351,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B86093E52F1C212F00AD0B9C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n#set -euo pipefail\n\nAPP_PATH=\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\"\n \nQT_BIN_DIR=\"${HOME}/Qt/6.10.1/macos/bin\"\nMACDEPLOYQT=\"${QT_BIN_DIR}/macdeployqt\"\n\nif [[ ! -x \"$QT_BIN_DIR/macdeployqt\" ]]; then\n    echo \"ERROR: macdeployqt not found. Install Qt!\"\n    echo \"Tried: $QT_BIN_DIR/macdeployqt\"\n    exit 1\nfi \n\nif [[ ! -d \"$APP_PATH\" ]]; then \n    echo \"ERROR: App bundle not found at given filepath: $APP_NAME\" \n    exit 1\nfi \n\necho \"Fulfilling the all-father's request to run macdeployqt at ${APP_PATH} ...\"\n\n\"$MACDEPLOYQT\" \"$APP_PATH\" \\ \n    -verbose=2 \\\n    -always-overwrite \\ \n    #-codesign=\"$EXPANDED_CODE_SIGN_IDENTITY\"\n    \necho \"Odin is pleased! macdeployqt finished\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B86FC1D12F05ACF8007722A5 /* Sources */ = {
@@ -286,13 +445,31 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_APP_SANDBOX = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
+				ENABLE_FILE_ACCESS_MOVIES_FOLDER = readwrite;
+				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readwrite;
+				ENABLE_FILE_ACCESS_PICTURE_FOLDER = readwrite;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				FRAMEWORK_SEARCH_PATHS = "\"<Multiple values>\"";
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"<Multiple values>\"",
+					/users/andrewskatzes/Qt/6.10.1/macos/lib,
+				);
 				GCC_C_LANGUAGE_STANDARD = c23;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -311,8 +488,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/include",
 					"$(PROJECT_DIR)/ValhallaEngine/extern/fmt/include",
+					/Users/andrewskatzes/Qt/6.10.1/macos/include,
 				);
 				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
+				INFOPLIST_KEY_GCSupportsControllerUserInteraction = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -342,6 +521,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "RedStudios.Valhalla-Engine-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -401,13 +581,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7WV66DX3JJ;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				FRAMEWORK_SEARCH_PATHS = "\"<Multiple values>\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"<Multiple values>\"",
+					/users/andrewskatzes/Qt/6.10.1/macos/lib,
+				);
 				GCC_C_LANGUAGE_STANDARD = c23;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -420,8 +603,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/ValhallaEngine/extern/fbxsdk/include",
 					"$(PROJECT_DIR)/ValhallaEngine/extern/fmt/include",
+					/Users/andrewskatzes/Qt/6.10.1/macos/include,
 				);
 				INFOPLIST_KEY_CFBundleDisplayName = "Valhalla Engine Editor";
+				INFOPLIST_KEY_GCSupportsControllerUserInteraction = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -451,6 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "RedStudios.Valhalla-Engine-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = macosx;

@@ -39,7 +39,7 @@ vertex PixelData ValhallaSceneVS(uint VertexID [[vertex_id]], constant VertexDat
     float4 ViewPosition = SceneInfo->CameraMatrix * ScenePosition;
     
     /// 4. Fourth we transform by projection matrix
-    out.position = SceneInfo->CameraMatrix * ViewPosition;
+    out.position = SceneInfo->ProjectionMatrix * ViewPosition;
     
     /// 5. Then we transform normals the object's space to world space
     out.normal = normalize((SceneInfo->ObjectMatrix * float4(VertexInfo[VertexID].normal, 0.0)).xyz);
