@@ -200,6 +200,19 @@ namespace ValhallaEngine::Vulkan
         static vector<char> ReadShaderFile(const string& filepath);
     };
 
+    class VVulkanSwapchain
+    {
+    public:
+        static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
+
+        VVulkanSwapchain();
+
+        ~VVulkanSwapchain();
+
+        VVulkanSwapchain(const VVulkanSwapchain&) = delete;
+        void operator=(const VVulkanSwapchain&) = delete;
+    };
+
     static bool IsExtensionAvailable(const vector<VkExtensionProperties>& properties, const char* extension);
 
     static bool IsDeviceSuitable(VkPhysicalDevice device);
@@ -214,6 +227,8 @@ namespace ValhallaEngine::Vulkan
     }
 
     static int SetupVulkanRHIRenderer(vector<const char*> InstanceExtensions);
+
+    void VulkanCreateSwapchainRHI();
 
     VVulkanQueueFamilyIndices FindQueueFamilies(VkPhysicalDevice device);
 
@@ -238,6 +253,13 @@ namespace ValhallaEngine::Vulkan
 
     VkFormat FindSupportFormat(const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 
+    VkSurfaceFormatKHR ChooseSwapSurfaceFormat(const vector<VkSurfaceFormatKHR>& UsableFormats);
+
+    VkPresentModeKHR ChooseSwapPresentMode(const vector<VkPresentModeKHR>& UsablePresentModes);
+
+    VkExtent2D ChooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
+
+    inline VkExtent2D                   VWindowExtent;
     inline VkAllocationCallbacks*       VAllocator          = nullptr;
     inline VkDevice                     VDevice             = VK_NULL_HANDLE;
     inline VkPhysicalDevice             VPhysicalDevice     = VK_NULL_HANDLE;

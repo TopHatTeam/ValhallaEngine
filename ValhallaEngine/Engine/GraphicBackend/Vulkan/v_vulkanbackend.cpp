@@ -72,7 +72,7 @@ namespace ValhallaEngine
     static bool Vulkan::InitVulkanRHI(void)
     {
         /*Check if the memory type index is valid*/
-        if (VMemoryTypeIndex == UINT64_MAX)
+        if (VMemoryTypeIndex == numeric_limits<VkUint32>::max())
         {
             return false;
         }
@@ -154,7 +154,35 @@ namespace ValhallaEngine
             ErrorMessageBox("Vulkan Error", "Failed to find a suitable GPU!");
             return -1;
         }
+
+        vkGetPhysicalDeviceProperties(VPhysicalDevice, &VPhysicalDeviceProperties);
+        fmt::print("Physical Device: {} - API Version: {}.{}.{}\n", VPhysicalDeviceProperties.deviceName, VK_VERSION_MAJOR(VPhysicalDeviceProperties.apiVersion), VK_VERSION_MINOR(VPhysicalDeviceProperties.apiVersion), VK_VERSION_PATCH(VPhysicalDeviceProperties.apiVersion));
+
+        VVulkanQueueFamilyIndices indices = FindQueueFamilies(VPhysicalDevice);
+        vector<VkDeviceQueueCreateInfo> QueueCreateInfo;
+        set<VkUint32> UniqueQueueFamilies = { indices.GraphicsFamily, indices.PresentFamily };
+
+        float QueuePriority = 1.0f;
+        for (VkUint32 QueueFamily: UniqueQueueFamilies)
+        {
+            VkDeviceQueueCreateInfo QueueInfo{};
+            QueueInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+            QueueInfo.queueFamilyIndex = QueueFamily;
+            QueueInfo.queueCount = 1;
+            QueueInfo.pQueuePriorities = &QueuePriority;
+            QueueCreateInfo.push_back(QueueInfo);
+        }
     }   
+
+    void Vulkan::VulkanCreateSwapchainRHI()
+    {
+        VVulkanSwapChainSupportDetails SwapchainSupport = GetSwapchainSupport();
+        VkSurfaceFormatKHR SurfaceFormat = ChooseSwapSurfaceFormat(SwapchainSupport.formats);
+        VkPresentModeKHR PresentMode = ChooseSwapPresentMode(SwapchainSupport.PresentModes);
+        VkExtent2D Extent = ChooseSwapExtent(SwapchainSupport.capabilities);
+
+        VkUint32 ImageCount = SwapchainSupport.capabilities.minImageCount + 1;
+    }
 
     VVulkanQueueFamilyIndices Vulkan::FindQueueFamilies(VkPhysicalDevice device)
     {
@@ -220,6 +248,93 @@ namespace ValhallaEngine
         }
 
         return details;
+    }
+
+    VkSurfaceFormatKHR Vulkan::ChooseSwapSurfaceFormat(const vector<VkSurfaceFormatKHR>& UsableFormats)
+    {
+        for (const auto& uformat : UsableFormats)
+        {
+            if (uformat.format == VK_FORMAT_B8G8R8A8_SRGB && uformat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR)
+            {
+                return uformat;
+            }
+
+            return UsableFormats[0];
+        }
+    }
+
+    VkPresentModeKHR Vulkan::ChooseSwapPresentMode(const vector<VkPresentModeKHR>& UsablePresentModes)
+    {
+        for (const auto& upresent : UsablePresentModes)
+        {
+            if (upresent == VK_PRESENT_MODE_MAILBOX_KHR)
+            {
+                fmt::print("Engine: Vulkan present mode = Mailbox\n");
+                return upresent;
+            }
+        }
+
+        fmt::print("Engine: Vulkan present mode = FIFO\n");
+        return VK_PRESENT_MODE_FIFO_KHR;
+    }
+
+    VkExtent2D Vulkan::ChooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
+    {
+        VkUint32 Requiem = (numeric_limits<VkUint32>::max());
+
+        if (capabilities.currentExtent.width != Requiem)
+        {
+            return capabilities.currentExtent;
+        }
+        else 
+        {
+            VkExtent2D ForetoldExtent = VWindowExtent;
+            ForetoldExtent.width = std::max(capabilities.minImageExtent.width, std::min(capabilities.maxImageExtent.width, ForetoldExtent.width));
+            ForetoldExtent.height = std::max(capabilities.minImageExtent.height, std::min(capabilities.maxImageExtent.height, ForetoldExtent.height));
+            return ForetoldExtent;
+        }
+    }
+}
+
+VVulkanSwapchain::VVulkanSwapchain()
+{
+
+}
+
+VVulkanSwapchain::~VVulkanSwapchain()
+{
+    for (auto ImageView : VSwapchainImageViews)
+    {
+        vkDestroyImageView(VDevice, ImageView, VAllocator);
+    }
+
+    VSwapchainImageViews.clear();
+
+    if (VSwapchain != nullptr)
+    {
+        vkDestroySwapchainKHR(VDevice, VSwapchain, VAllocator);
+        VSwapchain = nullptr;
+    }
+
+    for (int i = 0; i < VDepthImages.size(); i++)
+    {
+        vkDestroyImageView(VDevice, VDepthImageViews[i], nullptr);
+        vkDestroyImage(VDevice, VDepthImages[i], nullptr);
+        vkFreeMemory(VDevice, VDepthImagesMemories[i], nullptr);
+    }
+
+    for (auto framebuffer : VSwapchainFramebuffers)
+    {
+        vkDestroyFramebuffer(VDevice, framebuffer, nullptr);
+    }
+
+    vkDestroyRenderPass(VDevice, VRenderPass, nullptr);
+
+    for (VkUsize i = 0; i < VSwapchainImages.size(); i ++)
+    {
+        vkDestroySemaphore(VDevice, VRenderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(VDevice, VImageAvailableSemaphores[i], nullptr);
+        vkDestroyFence(VDevice, VInFlightFences[i], nullptr);
     }
 }
 

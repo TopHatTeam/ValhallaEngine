@@ -19,12 +19,12 @@ namespace ValhallaEngine::Platform
     {
         @autoreleasepool
         {
-            char buffer[1024];                                  // <--- Local buffer to hold our formatted string
+            char buffer[1024];                                                    // <--- Local buffer to hold our formatted string
             
-            va_list args;                                       // <--- Declare a va_list to hold the variable arguments
-            va_start(args, Message);                            // <--- Initalize 'args' to point to the first argument after 'Message'
+            va_list args;                                                         // <--- Declare a va_list to hold the variable arguments
+            va_start(args, Message);                                           // <--- Initalize 'args' to point to the first argument after 'Message'
             vsnprintf(buffer, sizeof(buffer), Message, args);   // <--- Write formatted string into buffer
-            va_end(args);                                       // <--- Clean up the variable argument list
+            va_end(args);                                                      // <--- Clean up the variable argument list
             
             NSAlert* alert = [[NSAlert alloc] init];
             [alert setMessageText:[NSString stringWithUTF8String:BoxTitle]];
@@ -39,12 +39,12 @@ namespace ValhallaEngine::Platform
     {
         @autoreleasepool
         {
-            char buffer[1024];                                  // <--- Local buffer to hold our formatted string
+            char buffer[1024];                                                      // <--- Local buffer to hold our formatted string
             
-            va_list args;                                       // <--- Declare a va_list to hold the variable arguments
-            va_start(args, Message);                            // <--- Initalize 'args' to point to the first argument after 'Message'
-            vsnprintf(buffer, sizeof(buffer), Message, args);   // <--- Write formatted string into buffer
-            va_end(args);                                       // <--- Clean up the variable argument list
+            va_list args;                                                           // <--- Declare a va_list to hold the variable arguments
+            va_start(args, Message);                                             // <--- Initalize 'args' to point to the first argument after 'Message'
+            vsnprintf(buffer, sizeof(buffer), Message, args);     // <--- Write formatted string into buffer
+            va_end(args);                                                        // <--- Clean up the variable argument list
             
             NSAlert* alert = [[NSAlert alloc] init];
             [alert setMessageText:[NSString stringWithUTF8String:BoxTitle]];
@@ -60,12 +60,12 @@ namespace ValhallaEngine::Platform
     {
         @autoreleasepool
         {
-            char buffer[1024];                                  // <--- Local buffer to hold our formatted string
+            char buffer[1024];                                                      // <--- Local buffer to hold our formatted string
             
-            va_list args;                                       // <--- Declare a va_list to hold the variable arguments
-            va_start(args, Message);                            // <--- Initalize 'args' to point to the first argument after 'Message'
-            vsnprintf(buffer, sizeof(buffer), Message, args);   // <--- Write formatted string into buffer
-            va_end(args);                                       // <--- Clean up the variable argument list
+            va_list args;                                                           // <--- Declare a va_list to hold the variable arguments
+            va_start(args, Message);                                             // <--- Initalize 'args' to point to the first argument after 'Message'
+            vsnprintf(buffer, sizeof(buffer), Message, args);     // <--- Write formatted string into buffer
+            va_end(args);                                                        // <--- Clean up the variable argument list
             
             NSAlert* alert = [[NSAlert alloc] init];
             [alert setMessageText:[NSString stringWithUTF8String:BoxTitle]];
