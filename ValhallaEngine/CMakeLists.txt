@@ -50,7 +50,6 @@ add_executable(${PROJECT_NAME} MACOSX_BUNDLE
     Engine/Editor/v_editor.cpp
     Engine/Editor/headers/v_editor.hpp
     main.mm
-    viewportui.h viewportui.cpp viewportui.ui
 )
 endif()
 

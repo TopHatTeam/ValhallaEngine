@@ -21,6 +21,7 @@ typedef struct
     /// This is used for lighting and other cool effects
     float3 WorldPosition;
     
+    
     float3 normal;
 } PixelData;
 
@@ -45,6 +46,29 @@ vertex PixelData ValhallaSceneVS(uint VertexID [[vertex_id]], constant VertexDat
     out.normal = normalize((SceneInfo->ObjectMatrix * float4(VertexInfo[VertexID].normal, 0.0)).xyz);
     
     return out;
+}
+
+fragment float3 SpecularPS(SpecularData in [[stage_in]])
+{
+    float3 vColor;
+    
+    // Normalize the vectors to ensure it's correct
+    float3 N = normalize(in.uNormalVector);
+    float3 L = normalize(in.uLightDirection);
+    float3 V = normalize(in.uViewDirection);
+    float3 H = normalize(L + V);
+    
+    // Calculate the diffuse and specular components
+    float DiffuseDot        = max(dot(L, N), 0.0);
+    float SpecularDot       = max(dot(N, H), 0.0);
+    float SpecularFactor    = pow(SpecularDot, in.uShinyInt);
+    
+    float3 vDiffuse     = in.uDiffuseColorInt * DiffuseDot;
+    float3 vSpecular    = in.uSpecularInt * SpecularFactor;
+    
+    vColor = in.uAmbientColorInt + vDiffuse + vSpecular;
+    
+    return vColor;
 }
 
 fragment float4 ValhallaScenePS(PixelData in [[stage_in]], constant SceneLightingData* scene [[buffer(0)]], constant LightData* lights [[buffer(1)]] )

@@ -116,15 +116,14 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				assets/Assets.xcassets,
-				Engine/CMakeLists.txt,
 				Engine/Editor/CMakeLists.txt,
 				Engine/Editor/v_editor.cpp,
 				Engine/GraphicBackend/Metal/v_metalbackend.mm,
 				Engine/GraphicBackend/Vulkan/v_vulkanbackend.cpp,
 				Engine/LevelCore/v_level.cpp,
 				Engine/PackageCore/v_datapackage.cpp,
-				Engine/v_platform.mm,
 				Engine/WindowCore/Mac/CMakeLists.txt,
+				Engine/WindowCore/Mac/MacSplashScreen.mm,
 				Engine/WindowCore/Mac/VMac.mm,
 				extern/fmt/src/format.cc,
 				extern/fmt/src/os.cc,
@@ -178,12 +177,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80B7B4A30502F0D004874C1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE5EE62F2E612A00784690 /* CompilerIdCXX.xcodeproj */,
+				B8EE5FB12F2E613000784690 /* ValhallaEngine.xcodeproj */,
+				B8EE5FBC2F2E613000784690 /* FMT.xcodeproj */,
+				B8EE5F1F2F2E612B00784690 /* CompilerIdOBJCXX.xcodeproj */,
+				B8EE5E7A2F2E612800784690 /* CompilerIdC.xcodeproj */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		B86FC1C62F05AB70007722A5 = {
 			isa = PBXGroup;
 			children = (
 				B8CFCCDF2F15BFE600E4738E /* ValhallaEngine */,
 				B86FC1E22F05AD59007722A5 /* Frameworks */,
 				B86FC1D62F05ACF8007722A5 /* Products */,
+				B80B7B4A30502F0D004874C1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};

@@ -20,6 +20,15 @@
 /// Mathematical constant for E
 #define E 2.718281828459045
 
+/// This is used for bitfield types, it makes things more readable and understandable instead if manually typing 0 or 1
+#define TRUE 1 
+
+/// This is used for bitfield types, it makes things more readable and understandable instead if manually typing 0 or 1
+#define FALSE 0
+
+/// Bitfield type definition
+typedef unsigned long       bitfield; 
+
 /// This is an unsigned 8-bit integer
 typedef unsigned char       ubyte;
 
@@ -42,7 +51,8 @@ typedef unsigned long long  usize;
 typedef signed char         sbyte;
 
 /// This is a signed 16-bit integer
-typedef signed short        sword;
+typedef signed short        sword;  
+
 
 /// This is a signed 32-bit integer
 typedef signed int          int32;

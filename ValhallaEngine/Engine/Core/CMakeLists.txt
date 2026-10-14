@@ -11,17 +11,15 @@ add_library(ValhallaEngineCore SHARED)
 
 if(APPLE)
 target_sources(ValhallaEngineCore PRIVATE
-    v_datapackage.cpp
-    #v_metalbackend.mm
     v_platform.mm
+    v_material.cpp
 )
 endif()
 
 if(WIN32 AND UNIX)
 target_sources(ValhallaEngineCore PRIVATE
-    v_datapackage.cpp
-    #v_metalbackend.mm
     v_platform.cpp
+    v_material.cpp
 )
 endif()
 

@@ -18,7 +18,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreGraphics/CoreGraphics.h>
 
-#include "../../../headers/v_types.hpp"
+#include "../../../Core/headers/v_types.hpp"
 
 namespace ValhallaEngine::Mac
 {
@@ -47,13 +47,21 @@ namespace ValhallaEngine::Mac
         switch(type)
         {
             case VMWT_FULLSCREEN:
+            {
                 WinType = VMWT_FULLSCREEN;
-                
+                break;
+            }
             case VMWT_WINDOWEDFULLSCREEN:
+            {
                 WinType = VMWT_WINDOWEDFULLSCREEN;
+                break;
+            }
                 
             default:
+            {
                 WinType = VMWT_WINDOWED;
+                break;
+            }
         }
         
         return WinType;
@@ -64,7 +72,9 @@ namespace ValhallaEngine::Mac
         switch(type)
         {
             case VMWT_FULLSCREEN:
+            {
                 return "Fullscreen";
+            }
                 
             case VMWT_WINDOWED:
                 return "Windowed";
@@ -91,14 +101,4 @@ namespace ValhallaEngine::Mac
         
     };
 
-    struct VMacSplash 
-    {
-    public:
-
-        static void DisplaySplash(const char* filepath);
-
-        static void HideSplash();
-        
-        static void Desconstruct();
-    };
 }

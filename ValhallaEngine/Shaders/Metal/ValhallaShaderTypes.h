@@ -58,12 +58,22 @@ typedef struct
 typedef struct
 {
     simd_float3  LightPosition;
-    
     simd_float3  LightColor;
     float        LightIntensity;
-    
     /// It shows how shinny something is
     float SpecularPower;
 } LightData;
+
+typedef struct
+{
+    simd_float3 uLightDirection;
+    simd_float3 uNormalVector;
+    simd_float3 uViewDirection;
+    simd_float3 uAmbientColorInt;   // Intensity
+    simd_float3 uDiffuseColorInt;   // Intensity
+    simd_float3 uSpecularInt;       // Intensity
+    float uShinyInt;                // Intensity
+    
+} SpecularData;
 
 #endif /* ValhallaShaderTypes_h */
