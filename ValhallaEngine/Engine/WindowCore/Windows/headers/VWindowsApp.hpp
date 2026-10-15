@@ -25,6 +25,8 @@ namespace ValhallaEngine::Windows
         static void HideSplash();
 
         static void Desconstruct();
+
+        static int RunApplication(HINSTANCE hInstance, int nCmdShow);
     protected:
         static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
