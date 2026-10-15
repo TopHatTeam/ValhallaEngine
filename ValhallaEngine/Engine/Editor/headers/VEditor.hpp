@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_editor.hpp
+//  VEditor.hpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/14/26.

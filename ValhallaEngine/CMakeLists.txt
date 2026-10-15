@@ -47,8 +47,8 @@ add_subdirectory(extern/fmt)    # fmt
 
 if(APPLE)
 add_executable(${PROJECT_NAME} MACOSX_BUNDLE
-    Engine/Editor/v_editor.cpp
-    Engine/Editor/headers/v_editor.hpp
+    Engine/Editor/VEditor.cpp
+    Engine/Editor/headers/VEditor.hpp
     main.mm
 )
 endif()
@@ -57,12 +57,14 @@ add_subdirectory(Engine/Core)
 add_subdirectory(Engine/Editor)
 
 if(APPLE)
+    add_subdirectory(extern/metal-cpp)
+
     add_subdirectory(Engine/GraphicBackend/Metal)
     add_subdirectory(Engine/WindowCore/Mac)
 endif()
 
 if(WIN32)
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PRIVATE 
     fmt::fmt
     Qt6::Core
     Qt6::Gui
@@ -84,7 +86,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 endif()
 
 if(APPLE)
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+    MetalCPPLibrary
     fmt::fmt
     Qt6::Core
     Qt6::Gui

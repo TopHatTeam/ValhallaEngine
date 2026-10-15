@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_editor.cpp
+//  VEditor.cpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/14/26.
@@ -11,7 +11,7 @@
 
 // This is extremely incomplete! Also a shit start
 
-#include "headers/v_editor.hpp"
+#include "headers/VEditor.hpp"
 
 using namespace ValhallaEngine::Editor;
 

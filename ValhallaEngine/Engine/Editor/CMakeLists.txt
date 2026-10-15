@@ -1,7 +1,7 @@
 add_library(ValhallaEngineEditor STATIC)
 
 target_sources(ValhallaEngineEditor PRIVATE
-    v_editor.cpp
+    VEditor.cpp
 )
 
 target_include_directories(ValhallaEngineEditor PUBLIC

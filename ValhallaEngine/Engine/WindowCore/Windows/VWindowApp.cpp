@@ -12,22 +12,21 @@
 #include <stdio.h>
 #include "headers/VWindowsApp.hpp"
 
-namespace ValhallaEngine::Windows
+using namespace ValhallaEngine::Windows;
+
+int VWindowsApp::RunApplication(HINSTANCE hInstance, int nCmdShow)
 {
-    int VWindowsApp::RunApplication(HINSTANCE hInstance, int nCmdShow)
-    {
-        // Intitialze the window class
-        WNDCLASSEX WindowClass  = { 0 };
-        WindowClass.cbSize      = sizeof(WNDCLASSEX);
-        WindowClass.style       = CS_HREDRAW | CS_VREDRAW;
-        WindowClass.lpfnWndProc = WindowProc;
-        WindowClass.hInstance   = hInstance;
+    // Intitialze the window class
+    WNDCLASSEX WindowClass  = { 0 };
+    WindowClass.cbSize      = sizeof(WNDCLASSEX);
+    WindowClass.style       = CS_HREDRAW | CS_VREDRAW;
+    WindowClass.lpfnWndProc = WindowProc;
+    WindowClass.hInstance   = hInstance;
 
-        WindowClass.hCursor         = LoadCursor(NULL, IDC_ARROW);
-        WindowClass.lpszClassName   = L"VWindowAppClass";
-        RegisterClassEx(&WindowClass);
+    WindowClass.hCursor         = LoadCursor(NULL, IDC_ARROW);
+    WindowClass.lpszClassName   = L"VWindowAppClass";
+    RegisterClassEx(&WindowClass);
 
-        // We will need a RECT for the window later for resizing and other things
+    // We will need a RECT for the window later for resizing and other things
         
-    }
 }

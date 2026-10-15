@@ -6,9 +6,10 @@
 #
 # -------------------------------------------------
 
-add_library(ValhallaMetalRHI STATIC)
+add_library(ValhallaMetalRHI SHARED)
 
 target_sources(ValhallaMetalRHI PRIVATE
+    VMetalRHI.cpp
     VMetalbackend.mm
 )
 
@@ -20,3 +21,6 @@ target_compile_definitions(ValhallaMetalRHI PUBLIC
     VALHALLA_ENGINE
 )
 
+target_link_libraries(ValhallaMetalRHI PUBLIC
+    MetalCPPLibrary
+)
