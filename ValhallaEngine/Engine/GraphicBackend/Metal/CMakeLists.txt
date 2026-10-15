@@ -9,7 +9,7 @@
 add_library(ValhallaMetalRHI STATIC)
 
 target_sources(ValhallaMetalRHI PRIVATE
-    v_metalbackend.mm
+    VMetalbackend.mm
 )
 
 target_include_directories(ValhallaMetalRHI PUBLIC

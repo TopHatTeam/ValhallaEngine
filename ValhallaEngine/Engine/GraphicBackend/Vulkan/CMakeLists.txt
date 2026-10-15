@@ -9,7 +9,7 @@
 add_library(ValhallaEngineVulkanRHI SHARED)
 
 target_sources(ValhallaEngineVulkanRHI PRIVATE
-	v_vulkanbackend.cpp
+	VVulkanbackend.cpp
 )
 
 target_include_directories(ValhallaEngineVulkanRHI PUBLIC

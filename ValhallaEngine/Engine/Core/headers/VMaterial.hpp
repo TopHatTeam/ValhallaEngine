@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_material.hpp
+//  VMaterial.hpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 10/13/26.
@@ -11,7 +11,7 @@
 
 #pragma once 
 
-#include "v_types.hpp"
+#include "VTypes.hpp"
 
 namespace ValhallaEngine::Material 
 {

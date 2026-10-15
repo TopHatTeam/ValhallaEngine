@@ -2,14 +2,14 @@
 //
 //  MIT License
 //
-//  MacSplashScreen.mm
+//  VMacSplashScreen.mm
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 9/8/26.
 //
 // -------------------------------------------------
 
-#include "headers/MacSplashScreen.h"
+#include "headers/VMacSplashScreen.h"
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 

@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_vulkanbackend.hpp
+//  VVulkanbackend.hpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/22/26.
@@ -21,7 +21,7 @@
 #include <fmt/core.h>
 #include <vulkan/vulkan.hpp>
 
-#include "../../../Core/headers/v_types.hpp"
+#include "../../../Core/headers/VTypes.hpp"
 
 typedef unsigned char       VkUint8;    /* 8-bit unsigned integer used for Vulkan */
 typedef unsigned short      VkUint16;   /* 16-bit unsigned integer used for Vulkan*/

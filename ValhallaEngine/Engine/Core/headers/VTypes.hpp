@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_types.hpp
+//  VTypes.hpp
 //  Valhalla Engine
 //
 //  Created by Andrew Skatzes on 12/31/25.

@@ -2,14 +2,14 @@
 //
 //  MIT License
 //
-//  v_platform.mm
+//  VPlatform.mm
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/8/26.
 //
 // -------------------------------------------------
 
-#import "headers/v_platform.h"
+#import "headers/VPlatform.h"
 #import <Cocoa/Cocoa.h>
 
 

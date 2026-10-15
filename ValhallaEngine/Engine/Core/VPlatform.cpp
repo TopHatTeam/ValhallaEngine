@@ -2,14 +2,14 @@
 //
 //  MIT License
 //
-//  v_platform.cpp
+//  VPlatform.cpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/8/26.
 //
 // -------------------------------------------------
 
-#include "headers/v_platform.h"
+#include "headers/VPlatform.h"
 
 #if defined(_WIN32) || defined(_WIN64)
     #include <windows.h>

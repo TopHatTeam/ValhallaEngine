@@ -2,15 +2,15 @@
 //
 //  MIT License
 //
-//  v_vulkanbackend.cpp
+//  VVulkanbackend.cpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/22/26.
 //
 // -------------------------------------------------
 
-#include "headers/v_vulkanbackend.hpp"
-#include "../../headers/v_platform.h"
+#include "headers/VVulkanbackend.hpp"
+#include "../../Core/headers/VPlatform.h"
 
 using namespace ValhallaEngine::Vulkan;
 

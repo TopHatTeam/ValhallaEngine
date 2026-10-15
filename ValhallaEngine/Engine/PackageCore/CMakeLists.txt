@@ -9,7 +9,7 @@
 add_library(ValhallaEngineVAP STATIC)
 
 target_sources(ValhallaEngineVAP PRIVATE
-    v_datapackage.cpp
+    VDatapackage.cpp
 )
 
 target_include_directories(ValhallaEngineVAP PUBLIC

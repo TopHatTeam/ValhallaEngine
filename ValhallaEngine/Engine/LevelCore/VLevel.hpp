@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_level.hpp
+//  VLevel.hpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 4/7/26.
@@ -11,7 +11,7 @@
 
 #pragma once
 
-#include "../Core/headers/v_types.hpp"
+#include "../Core/headers/VTypes.hpp"
 
 namespace ValhallaEngine::Level
 {

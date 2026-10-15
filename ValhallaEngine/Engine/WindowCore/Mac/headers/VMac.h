@@ -18,7 +18,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreGraphics/CoreGraphics.h>
 
-#include "../../../Core/headers/v_types.hpp"
+#include "../../../Core/headers/VTypes.hpp"
 
 namespace ValhallaEngine::Mac
 {

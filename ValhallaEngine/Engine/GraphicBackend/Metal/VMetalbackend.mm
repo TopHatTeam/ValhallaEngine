@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_metalbackend.m
+//  VMetalbackend.mm
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 1/1/26.
@@ -11,9 +11,9 @@
 
 // This is incomplete! So, don't expect it to work!
 
-#import "headers/v_metalbackend.h"
+#import "headers/VMetalbackend.h"
 #import "../../../Shaders/Metal/ValhallaShaderTypes.h"
-#import "../../headers/v_platform.h"
+#import "../../headers/VPlatform.h"
 
 using namespace ValhallaEngine::Platform;
 

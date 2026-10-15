@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_datapackage.h
+//  VDatapackage.h
 //  Valhalla Engine
 //
 //  Created by Andrew Skatzes on 12/26/25.
@@ -17,8 +17,8 @@
 #include <cstring>
 #include <fstream>
 
-#include "../../headers/v_types.hpp"
-#include "v_platform.h"
+#include "../../Core/headers/VTypes.hpp"
+#include "../../Core/headers/VPlatform.h"
 
 #include <fmt/core.h>
 

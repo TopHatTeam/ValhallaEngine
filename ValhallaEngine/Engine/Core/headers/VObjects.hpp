@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  v_objects.hpp
+//  VObjects.hpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 10/12/26.

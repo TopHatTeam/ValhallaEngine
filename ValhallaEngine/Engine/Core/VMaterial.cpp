@@ -2,14 +2,14 @@
 //
 //  MIT License
 //
-//  v_material.cpp
+//  VMaterial.cpp
 //  Valhalla Engine Editor
 //
 //  Created by Andrew Skatzes on 10/13/26.
 //
 // ------------------------------------------------
 
-#include "headers/v_material.hpp"
+#include "headers/VMaterial.hpp"
 
 namespace ValhallaEngine::Material
 {
