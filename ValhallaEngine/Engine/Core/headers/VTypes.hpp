@@ -10,6 +10,7 @@
 // -------------------------------------------------
 
 #pragma once
+#include <fmt/std.h>
 
 /// This is used for return NULL in C++
 #define EMPTY {}
@@ -25,6 +26,14 @@
 
 /// This is used for bitfield types, it makes things more readable and understandable instead if manually typing 0 or 1
 #define FALSE 0
+
+/// Use this for checking unexpected end of file for I/O functions
+#define CHECK_EOF(A, FileType)                                                          \
+    if (A != 1)                                                                         \
+    {                                                                                   \
+        fmt::println("IO ERROR: Unexpected End of File for {} file format", FileType);  \
+        return false;                                                                   \
+    }
 
 /// Bitfield type definition
 typedef unsigned long       bitfield; 
@@ -148,3 +157,5 @@ typedef rot3<double>    rot3d;
 
 /// This is a integer form of a 3D rotator
 typedef rot3<int>       rot3i;
+
+

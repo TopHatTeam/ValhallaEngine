@@ -41,6 +41,12 @@ if(UNIX AND NOT APPLE)
     find_package(Vulkan REQUIRED)
 endif()
 
+if(APPLE)
+    find_library(METAL_FRAMEWORK Metal REQUIRED)
+    find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+    find_library(QUARTZCORE_FRAMEWORK QuartzCore REQUIRED)
+endif()
+
 qt_standard_project_setup()
 
 add_subdirectory(extern/fmt)    # fmt
@@ -87,6 +93,9 @@ endif()
 
 if(APPLE)
 target_link_libraries(${PROJECT_NAME} PRIVATE 
+    ${METAL_FRAMEWORK}
+    ${FOUNDATION_FRAMEWORK}
+    ${QUARTZCORE_FRAMEWORK}
     MetalCPPLibrary
     fmt::fmt
     Qt6::Core

@@ -9,6 +9,7 @@
 add_library(ValhallaMetalRHI SHARED)
 
 target_sources(ValhallaMetalRHI PRIVATE
+    VMetalAppDelegate.cpp
     VMetalRHI.cpp
     VMetalbackend.mm
 )

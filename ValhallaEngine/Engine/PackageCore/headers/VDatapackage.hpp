@@ -2,7 +2,7 @@
 //
 //  MIT License
 //
-//  VDatapackage.h
+//  VDatapackage.hpp
 //  Valhalla Engine
 //
 //  Created by Andrew Skatzes on 12/26/25.
