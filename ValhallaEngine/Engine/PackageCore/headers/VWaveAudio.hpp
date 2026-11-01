@@ -27,6 +27,16 @@
 #define LITTLE_ENDIAN_ORDER     0x44434241UL
 #define BIG_ENDIAN_ORDER        0x41424344UL
 
+#if defined(__cplusplus) && __cplusplus >= 201103L
+    #define WAVTHREAD thread_local
+#elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
+    #define WAVTHREAD _Thread_local
+#elif defined(_MSC_VER)
+    #define WAVTHREAD __declspec(thread)
+#else 
+    #define WAVTHREAD __thread
+#endif
+
 namespace ValhallaEngine::Endian
 {
     inline constexpr bool IsHostBigEndian()
@@ -65,6 +75,33 @@ namespace ValhallaEngine::Audio
     inline constexpr uint32 VLittleEndianWavFactChunkID     = ((uint32)'fact');
     inline constexpr uint32 VLittleEndianWavDataChunkID     = ((uint32)'data');
     inline constexpr uint32 VLittleEndianWavID              = ((uint32)'WAVE');
+
+    inline constexpr uword VWavFormatPCM            = ((uword)0x0001);
+    inline constexpr uword VWavFormatIEEEFloat      = ((uword)0x0003);
+    inline constexpr uword VWavFormatALAW           = ((uword)0x0006);
+    inline constexpr uword VWavFormatMULAW          = ((uword)0x0007);
+    inline constexpr uword VWavFormatExtensible     = ((uword)0xFFFE);
+
+    inline constexpr ubyte VWavOpenRead     = ((ubyte)1);
+    inline constexpr ubyte VWavOpenWrite    = ((ubyte)2);
+    inline constexpr ubyte VWavOpenAppend   = ((ubyte)4);
+
+    /// We going to have a how did we fucked up struct and enum makes life easier for me and likely you
+    enum class VWavErrorCode
+    {
+        VWEC_UNDEFINED,
+        VWEC_OK,
+        VWEC_ERROR_OS,
+        VWEC_ERROR_FORMAT,
+        VWEC_ERROR_MODE,
+        VWEC_ERROR_PARAMETER
+    };
+
+    struct VWavError
+    {
+        VWavErrorCode   ErrorCode;
+        int             IsLiteral;
+    };
 
     #pragma pack(push, 1)
     struct VWavChunkHeader
@@ -126,6 +163,7 @@ namespace ValhallaEngine::Audio
     {
         FILE* WavFile;
         char* Filename;
+        uint32 WavMode;
         bool bIsNewFile;
 
         VWavMasterChunk RiffChunk;
@@ -144,5 +182,17 @@ namespace ValhallaEngine::Audio
         0x00, 0x38, 0x9B, 0x71
     };
 
+    /**
+     * @brief This function parses Wav file headers 
+     * @param VWavFile - Wav file used for parsing
+     * @note This function supports big-endian and little-endian CPUs
+     * @returns True if successfully parsed file, otherwise false
+     */
     bool ParseWavHeader(VWavFile* file);
+
+
+    bool WriteWavHeader(VWavFile* file);
+    
+
+    bool InitializeWav(VWavFile* file, const char* filename, uint32 WavMode);
 }
