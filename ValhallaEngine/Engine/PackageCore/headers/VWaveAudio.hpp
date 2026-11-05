@@ -195,4 +195,61 @@ namespace ValhallaEngine::Audio
     
 
     bool InitializeWav(VWavFile* file, const char* filename, uint32 WavMode);
+
+    bool FinializeWav(VWavFile* file);
+
+    VWavFile* OpenWav(const char* filename, uint32 WavMode);
+
+    bool CloseWav(VWavFile* file);
+
+    int SeekWav(VWavFile* file, long int offset, int origin);
+
+    void RewindWav(VWavFile* file);
+
+    /**
+     * @brief Tells if the end of the wave file is reached
+     * @param file  Wav file to check for end of file
+     * @return 1 if end of the wave file is reached, 0 otherwise
+     */
+    int EOFWav(const VWavFile* file);
+
+    int FlushWav(VWavFile* file);
+
+    VWavFile* ReopenWav(VWavFile* file, const char* filename, uint32 WavMode);
+
+    usize ReadWav(VWavFile* file, void* buffer, usize count);
+
+    constexpr bool UpdateSizesWav(VWavFile* file);
+
+    bool SetFormatWav(VWavFile* file, uword format);
+
+    bool SetNumberOfChannelsWav(VWavFile* file, uword NumberOfChannels);
+
+    bool SetSampleRateWav(VWavFile* file, uint32 SampleRate);
+
+    bool SetValidBitsPerSampleWav(VWavFile* file, uword bits);
+
+    bool SetSampleSizeWav(VWavFile* file, usize SampleSize);
+
+    bool SetChannelMaskWav(VWavFile* file, uint32 ChannelMask);
+
+    bool SetSubFormatWav(VWavFile* file, uword SubFormat);
+
+    uword GetFormatWav(const VWavFile* file);
+
+    uword GetNumberOfChannelsWav(const VWavFile* file);
+
+    uint32 GetSampleRateWav(const VWavFile* file);
+
+    uword GetValidBitsPerSampleWav(const VWavFile* file);
+
+    usize GetSampleSizeWav(const VWavFile* file);
+
+    usize GetLengthWav(const VWavFile* file);
+
+    uint32 GetChannelMaskWav(const VWavFile* file);
+
+    uword GetSubFormatWav(const VWavFile* file);
+
+    long int TellWav(const VWavFile* file);
 }
